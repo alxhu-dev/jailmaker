@@ -1,4 +1,4 @@
-startup=0
+startup=1
 gpu_passthrough_intel=0
 gpu_passthrough_nvidia=0
 # Turning off seccomp filtering improves performance at the expense of security
