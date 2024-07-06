@@ -4,7 +4,7 @@
 with full access to all files via bind mounts, \
 thanks to systemd-nspawn!"""
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 __author__ = "Jip-Hop"
 __copyright__ = "Copyright (C) 2023, Jip-Hop"
 __license__ = "LGPL-3.0-only"
@@ -714,7 +714,7 @@ def start_jail(jail_name):
     if initial_setup:
         print("About to run the initial setup.")
         print("Waiting for networking in the jail to be ready.")
-        print("Please wait (this may take 90s in case of bridge networking)...")
+        print("Please wait (this may take 90s in case of bridge networking with STP is enabled)...")
         returncode = exec_jail(
             jail_name,
             [
