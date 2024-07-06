@@ -9,7 +9,8 @@ seccomp=1
 # Alternatively use --network-macvlan=eno1 instead of --network-bridge
 # Ensure to change eno1/br1 to the interface name you want to use
 # You may want to add additional options here, e.g. bind mounts
-systemd_nspawn_user_args=--network-bridge=br1
+systemd_nspawn_user_args=
+    --network-macvlan=enp5s0
     --resolv-conf=bind-host
     --system-call-filter='add_key keyctl bpf'
 
