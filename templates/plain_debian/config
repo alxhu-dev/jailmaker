@@ -10,6 +10,7 @@ seccomp=1
 # Ensure to change eno1/br1 to the interface name you want to use
 # You may want to add additional options here, e.g. bind mounts
 systemd_nspawn_user_args=
+#    --bind='/path/on/host/:/path/in/jail'
     --network-macvlan=enp5s0
     --resolv-conf=bind-host
     --system-call-filter='add_key keyctl bpf'
